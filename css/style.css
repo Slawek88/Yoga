@@ -1,0 +1,291 @@
+﻿/* *,
+*:before,
+*:after {
+  box-sizing: border-box;
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  top: 0 !important;
+}
+
+html {
+  font-size: 10px;
+}
+
+header {
+  font-family: "Roboto", sans-serif;
+  background: url("../img/yoga.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: table;
+  background-attachment: fixed;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background: url("../img/yogaTwo.jpg") no-repeat center center;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  display: table;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+footer {
+  background: url("../img/joga3.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: table;
+  background-attachment: fixed;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+header hgroup {
+  position: absolute;
+  top: 7%;
+  left: 6%;
+  text-transform: uppercase;
+  /* line-height: 2.2em; */
+}
+
+header h1 {
+  font-size: 3.6rem;
+  color: #ffffff;
+  padding: 0.6em;
+}
+
+header h3 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* NAV */
+header nav {
+  position: fixed;
+  right: 3%;
+  top: 4%;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  overflow: hidden;
+  /* display: block; */
+}
+
+nav {
+  position: fixed;
+  padding: 0;
+  transition: 0.5s;
+  display: block;
+}
+
+/* nav ul {
+  position: fixed;
+} */
+
+.fa-bars {
+  float: right;
+}
+
+ul {
+  position: relative;
+  /* display: none; */
+  margin-top: 0.5em;
+  padding: 0;
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+  margin-right: 2em;
+  width: 5em;
+  text-align: center;
+}
+
+ul li:hover {
+  background: #000;
+  border-radius: 0.1em;
+  opacity: 0.6;
+}
+
+ul li a {
+  position: relative;
+  display: none;
+  /* padding: 10px 20px; */
+  /* color: #262626; */
+  color: rgb(131, 118, 118);
+  font-weight: bold;
+  transition: 0.5s;
+  text-decoration: none;
+  text-align: center;
+}
+
+ul li a:hover {
+  color: #fff;
+}
+
+.toggle {
+  display: block;
+  position: relative;
+  /* float: right; */
+  right: 10px;
+  /* top: 25px; */
+  color: rgba(75, 55, 55, 0.199) (255, 255, 255, 0.514);
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+ul li a.active {
+  display: block;
+}
+
+.arrow {
+  width: 64px;
+  height: 64px;
+  border: 3px solid black;
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  font-size: 5rem;
+  text-align: center;
+  text-shadow: 0 12px 0 black, 0 -12px 0 black;
+  overflow: hidden;
+  /* nie wychodzi poza */
+  transition: 1s ease;
+}
+
+.arrow:hover {
+  text-shadow: 0 -15px 0 white, 0 -30px 0 white;
+  color: white;
+  border-color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.fa-angle-down {
+  animation: arrow 1.4s infinite linear;
+}
+
+.article {
+  /* height: 50%; */
+  font-size: 3rem;
+  line-height: 1.5em;
+  color: black;
+  text-align: center;
+  padding: 5rem 6rem;
+}
+
+.article .one {
+  float: left;
+  width: 30%;
+}
+
+.article .two {
+  float: right;
+  width: 30%;
+}
+
+footer .article {
+  width: 100%;
+  height: auto;
+}
+
+footer .article h2 {
+  color: white;
+}
+
+.map {
+  overflow: hidden;
+  padding-bottom: 45.25%;
+  padding-left: 45%;
+  position: relative;
+  height: 0;
+  float: right;
+  width: 100%;
+  /* box-sizing: border-box; */
+}
+
+.map iframe {
+  height: 40%;
+  width: 40%;
+  position: absolute;
+}
+
+/* suwak w pionie wyłaczony */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@media (max-width: 1072px) {
+  ul li a {
+    /* color: #fff; */
+    color: rgb(51, 47, 47);
+  }
+  /* main p {
+    display: wrap;
+  } */
+}
+
+@media (max-width: 608px) {
+  #about .article {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+/* orientation: portrait or landscape  */
+@media (orientation: portrait) {
+  /* :: pseudoklasa */
+  h3 span::after {
+    /* zrob enter \A */
+    content: "\A";
+    white-space: "pre";
+  }
+
+  hgroup h3 {
+    font-size: 1.7em;
+  }
+
+  ul {
+    margin-top: 1.5em;
+    margin-right: -2.2em;
+    width: 40%;
+    padding: 3px;
+    font-size: 1.8rem;
+  }
+}
+
+/* pozioma orientacja */
+@media (orientation: landscape) {
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(-80px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(80px);
+  }
+}
