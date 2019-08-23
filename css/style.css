@@ -159,7 +159,8 @@ ul li a.active {
   height: 64px;
   border: 3px solid black;
   position: absolute;
-  bottom: 9%;
+  /* bottom: 9%; */
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
@@ -238,6 +239,7 @@ footer .article h2 {
     /* color: #fff; */
     color: rgb(51, 47, 47);
   }
+
   /* main p {
     display: wrap;
   } */
@@ -252,6 +254,7 @@ footer .article h2 {
 
 /* orientation: portrait or landscape  */
 @media (orientation: portrait) {
+
   /* :: pseudoklasa */
   h3 span::after {
     /* zrob enter \A */
@@ -273,8 +276,7 @@ footer .article h2 {
 }
 
 /* pozioma orientacja */
-@media (orientation: landscape) {
-}
+@media (orientation: landscape) {}
 
 @keyframes arrow {
   0% {
