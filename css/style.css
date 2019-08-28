@@ -162,10 +162,11 @@ ul li a.active {
   height: 64px;
   border: 3px solid black;
   position: absolute;
-  /* bottom: 9%; */
-  top: 90%;
+  display: block;
+  top: 75%;
   left: 50%;
   -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   border-radius: 50%;
   font-size: 5rem;
@@ -174,6 +175,7 @@ ul li a.active {
   overflow: hidden;
   /* nie wychodzi poza */
   -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
   transition: 1s ease;
 }
 
@@ -192,7 +194,7 @@ ul li a.active {
 
 .article {
   /* height: 50%; */
-  margin-top: 16rem;
+  margin-top: 13rem;
   font-size: 3rem;
   line-height: 1.5em;
   color: black;
@@ -253,9 +255,26 @@ footer .article h2 {
 }
 
 @media (max-width: 608px) {
-  #about .article {
+  .article {
     font-size: 2rem;
     line-height: 2.5rem;
+  }
+  main {
+    background-attachment: inherit;
+  }
+
+  main .article .one {
+    width: 100%;
+    margin-top: -6rem;
+    padding-bottom: 34rem;
+    /* margin-bottom: 60rem; */
+  }
+  main .article .two {
+    width: 100%;
+    margin-bottom: 11rem;
+  }
+  header nav {
+    font-size: 2rem;
   }
 }
 
